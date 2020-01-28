@@ -10,7 +10,115 @@
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Place favicon.ico in the root directory -->
+    <style>
+        /* Preloder */
+        .mfp-close,
+        .mfp-arrow,
+        .mfp-preloader,
+        .mfp-counter {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
 
+        .mfp-loading.mfp-figure {
+            display: none;
+        }
+
+        .mfp-hide {
+            display: none !important;
+        }
+
+        .mfp-preloader {
+            color: #CCC;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            text-align: center;
+            margin-top: -0.8em;
+            left: 8px;
+            right: 8px;
+            z-index: 1044;
+        }
+
+        .mfp-preloader a {
+            color: #CCC;
+        }
+
+        .mfp-preloader a:hover {
+            color: #FFF;
+        }
+
+        .mfp-s-ready .mfp-preloader {
+            display: none;
+        }
+
+        #preloder {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999999;
+            background: #4287f5;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -13px;
+            margin-left: -13px;
+            border-radius: 60px;
+            animation: loader 0.8s linear infinite;
+            -webkit-animation: loader 0.8s linear infinite;
+        }
+
+        @keyframes loader {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                border: 4px solid #36eef4;
+                border-left-color: transparent;
+            }
+
+            50% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+                border: 4px solid #3a47b7;
+                border-left-color: transparent;
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+                border: 4px solid #36eef4;
+                border-left-color: transparent;
+            }
+        }
+
+        @-webkit-keyframes loader {
+            0% {
+                -webkit-transform: rotate(0deg);
+                border: 4px solid #36eef4;
+                border-left-color: transparent;
+            }
+
+            50% {
+                -webkit-transform: rotate(180deg);
+                border: 4px solid #3a47b7;
+                border-left-color: transparent;
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                border: 4px solid #36eef4;
+                border-left-color: transparent;
+            }
+        }
+    </style>
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -24,23 +132,23 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="css/responsive.css"> -->
-	<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-	<script>
-		Weglot.initialize({
-			api_key: 'wg_64bf2ba8cedd06af07ec443f30c9187c4'
-		});
-	</script>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+        Weglot.initialize({
+            api_key: 'wg_64bf2ba8cedd06af07ec443f30c9187c4'
+        });
+    </script>
 </head>
 
 <body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
     <!-- header-start -->
     <header>
         <div class="header-area ">
@@ -72,14 +180,17 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-md-6">
                         <div class="slider_text ">
-                            <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s" >Download FlagBot<br>
+                            <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s">Download FlagBot<br>
                                 for iOS and Android</h3>
-                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">Start analyzing flags in seconds!</p>
+                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">Start analyzing flags
+                                in seconds!</p>
                             <div class="video_service_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                                <a href='https://android.flagbot.app'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' style='width:300px;height:120px;'/></a>
-								<a href='https://ios.flagbot.app'><img src="img/appstore.svg" alt="">
-								</a>
-							</div>
+                                <a href='https://android.flagbot.app'><img alt='Get it on Google Play'
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
+                                        style='width:300px;height:120px;' /></a>
+                                <a href='https://ios.flagbot.app'><img src="img/appstore.svg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-6">
@@ -118,7 +229,10 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+    
+    </script>
+
 </body>
 
 </html>
